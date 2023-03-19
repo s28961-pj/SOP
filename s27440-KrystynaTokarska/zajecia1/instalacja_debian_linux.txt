@@ -1,0 +1,101 @@
+Zadanie: Opisz proces instalacji systemu Linux debian
+
+Utworzenie maszyny wirtualnej
+
+1.	Virtual Box miałam już zainstalowany
+2.	Ze strony https://www.debian.org/index.pl.html pobrałam plik instalacyjny
+3.	W VirtualBox kliknęłam opcję „nowa” i utworzyłam maszynę o nazwie sop_debian (typ Linux, Wersja Debian 64-bit). Nie dodawałam rozszerzeń, ponieważ na zajęciach mówił Pan, że nie będziemy z nich korzystać.
+4.	Wybrałam zalecany rozmiar pamięci RAM, tj. 1024 MB. Chce zainstalować system z interfejsem graficznym (na zajęciach instalowaliśmy bez, jednak wolałabym w razie wypadku mieć możliwość również takiego podglądu). Ze strony debiana wyczytałam, że zalecany rozmiar pamięci to 1GB i tyle pamięci przydzieliłam.
+5.	Utworzyłam nowy wirtualny dysk twardy (bo nie miałam żadnego) o pojemności 10 GB (pojemność wybierałam po wyborze stałego/dynamicznego rozmiaru), zgodnie z zaleceniami ze strony debiana dla systemu z interfejsem graficznym.
+6.	Do wyboru miałam 3 opcje:
+a.	VDI – najbardziej kompatybilny, ma dostępne wszystkie przydatne opcje
+b.	VHD – używany przez rozwiązania microsoftowe, np. hiper-v (te dyski można również podpiąć do systemu operacyjnego) (przydatne jeśli robimy coś w Azure, ja nie robię)
+c.	VMDK – dla oprogramowania VMWare
+Na forum znalazłam informację, że jeżeli maszyna nie będzie przenoszona pod kontrolę innych wizualizatorów (tzn. inne programy do tworzenia maszyn wirtualnych?), to najlepiej wybrać pierwszą opcję. Nie planuję jej nigdzie przenosić pomiędzy programami wirtualizacyjnymi, zostawiam więc standardowy typ vdi. W dodatku pozostałe wersje są dużo trudniejsze w konfiguracji, co z punktu widzenia tego przedmiotu i przerabianego materiału jest nam zbędne.
+7.	Wybieram stały rozmiar dysku, ponieważ przeważnie jest sprawniejszy w użyciu (nie muszę czekać aż zostanie przydzielone miejsce w trakcie korzystania z maszyny, jest czytany ciągiem, co również poprawia jego szybkość/sprawność). Jeśli miałabym mało miejsca na komputerze prawdopodobnie wybrałabym dynamicznie przydzielany.
+Ustawienia maszyny wirtualnej
+8.	W ustawieniach Ogólne -> zaawansowane zmieniam schowek oraz przeciąganie i upuszczenie na dwukierunkowe (ponieważ być może będę chciała przenieść pliki np. z zadaniami z ukosa lub przekleić kawałek kodu)
+9.	 Nie ustawiam szyfrowania dysku ponieważ jest to tylko dla mojego użytku na moim komputerze i nie przechowuję tam nic tajnego. Może się przydać jeśli pracujemy w firmie, która ma politykę szyfrowania.
+10.	Nie zmieniam nic w okienku „podstawowe” (wszystko tam jest ok) oraz opis (nie potrzebuję dodać opisu)
+11.	W zakładce system -> płyta główna z kolejności bootowania odznaczam dyskietkę (nie korzystamy z niej). Chcę, żeby w pierwszej kolejności uruchamiała się z dysku twardego, a w drugiej z napędu optycznego. Chipset synchronizuje wszystkie elementy komputera, fizycznie znajduje się w płycie głównej. Z tego co wyczytałam to ICH9 jest lepszy dla starszych systemów operacyjnych i nie zaleca się wybierania go przy nowszych urządzeniach, w związku z tym pozostawiam PIIX3. Jako urządzenie wskazujące wybieram mysz (w przypadku gdy będę korzystać z interfejsu graficznego będę posługiwać się właśnie myszą, natomiast przy braku korzystania z interfejsu graficznego też warto ustawić mysz, jako najprostsze urządzenie). Z rozszerzonych właściwości zostawiam domyślne (I/O APIC (chociaż niezbędna jest tylko dla systemów Windows) oraz zegrar w czasie UTC). Opcja EFI zostaje wyłączona, (EFI zastępuje BIOSa na urządzeniach Apple) jeśli byśmy ją włączyli, to możliwe że włączając maszynę dostalibyśmy tylko widok terminala, co mogłoby być problematyczne.
+12.	W zakładce system -> procesor zostawiam 1, ponieważ więcej nie będzie potrzebne na potrzeby laboratoriów. Wykorzystanie zostawiam na 100%, ponieważ mam nowy komputer i nie mam potrzeby ograniczania. Włączam PAE/NX żeby w razie potrzeby była ona dostępna wewnątrz maszyny wirtualnej. Nie włączam opcji zagnieżdżenia VT-X/AMD-v ponieważ nie potrzebuję tworzyć maszyny wirtualnej wewnątrz maszyny.
+13.	W zakładce system -> akceleracja włączam zagnieżdżone stronnicowanie (wyczytałam, że warto to zrobić przy nowszych procesorach, i może to przyspieszyć wirtualizacje).
+14.	W zakładce Ekran – nie potrzebuję większej ilości monitorów, nie potrzebuję akceleracji 3D (może się przydać jakbym chciała pograć w gry, ale nie gram). Pamięć video zostawiam domyślną – 16MB, ponieważ nie będę używać do uruchamiania niczego ze złożoną grafiką. Jako kontroler grafiki wybieram VMSVGA czyli kontroler przeznaczony dla Linuxa (przy wyborze innej opcji pojawia się komunikat o niepoprawnych ustawieniach. VBoxSVGA jest polecany dla nowszych systemów windows, a VBoxVGA dla starszych Windowsów. Współczynnik skali służy do zwiększenia wyświetlanego ekranu gościa – zostawiam domyślny i najwyżej później w razie potrzeby powiększę.
+15.	Ekran -> zdalny pulpit nie uruchamiam. Mamy takie rozwiązanie w pracy – nikt nie ma swojej maszyny na komputerze, ale każdy ma dostęp do pulpitu zdalnego (mamy na nim zainstalowany program, z którego korzystamy rzadko i nie potrzeba licencji dla każdego).
+16.	Ekran -> nagrywanie zostawiam wyłączone, ponieważ nie potrzebuję nagrywać.
+17.	Pamięć – nie zmieniam nic, można ewentualnie wybrać plik dysku (jeśli był utworzony wcześniej?). Są też informacje o dysku, można sprawdzić czy się zgadza to co wybieraliśmy przy tworzeniu (u mnie się zgadza). Jeśli chcemy można dodać nowy dysk optyczny i nowy dysk twardy. W konrolerze IDE w ikonce płytki nie wybieram obrazu dysku (wybiorę go później).
+18.	Dźwięk – wyłączam, ponieważ nie jest mi potrzebny.
+19.	Sieć – włączam tylko jedną kartę sieciową. Są opcje:
+a.	NAT (jeśli będziemy chcieli coś wysłać do sieci to nasz fizyczny komputer pełni opcję routera) nie ma komunikacji pomiędzy maszynami, ale jest z gospodarzem
+b.	Mostkowana karta sieciowa (maszyna dostanie podobny adres jak nasz komputer, nie będzie podmiany adresów)
+c.	sieć wewnętrzna – jeśli mamy kilka maszyn wirtualnych w sieci wewnętrznej to mogą się ze sobą komunikować
+d.	Karta sieci izolowanej (host-only) – rozszerzenie sieci wewnętrznej, maszyny działające w tej samej sieci mają połączenie do gospodarza (w zwykłej sieci wewnętrznej nie mają)
+e.	Sieć NAT – maszyny w tej samej sieci mają połączenie między sobą, jest też kilka dodatkowych opcji (włączenie IPv6, przekierowywanie portów)
+f.	Cloud network – eksperyment, wersja sieci w chmurze producenta (Oracle)
+g.	Niepodłączony – nie jest podłączony do żadnej sieci
+h.	Wybieram NAT – nie jest mi potrzebna komunikacja między maszynami. Mogłabym wybrać kilka innych, ta jednak była domyślna i przy niej zostanę
+20.	Sieć zaawansowane – karty PCnet to starsze opcje (nie wybieram ich). Zostawiam opcję domyślną – Intel PRO/1000 MT Desktop. Pozostałe karty mają więcej możliwości, które nie będą mi potrzebne. Adres mac można odświeżyć (zmienia się tylko druga część, pierwsza [6] jest przypisana do VBoxa). Nie powinno się odświeżać bo zainstalowaniu bo może generować błędy.
+21.	Nie włączam opcji przekierowywanie portów, nie widzę potrzeby korzystania z tego.
+22.	Nie włączam portów szeregowych, ponieważ nie będę konfigurować urządzeń sieciowych.
+23.	USB – włączam kontroler. Przy kliknięciu „+” można przełączyć wejście od razu do maszyny wirtualnej (np. pendrive albo kamerę), ale nie mam potrzeby, poza tym wtedy nie mogłabym korzystać z tego na swoim komputerze więc nic nie dodaje.
+24.	Udostępnione foldery – na obecną chwilę wystarczy mi współdzielony schowek, być może później na potrzeby stworzę.
+25.	Interfejs użytkownika – jest od samego VBoxa, nic tutaj nie zmieniamy
+
+Instalacja debiana
+
+1.	Pierwsze włączenie maszyny – włączam opcję oddzielny start (ale na ten moment równie dobrze mogłabym włączyć zwykły. Pojawia się okno z menu instalacji, wybieram zwykły install, bo rzeczywiście warto się nauczyć tak to robić. W opcjach zaawansowanych był do wyboru tryb experta (można dzięki niemu ustawić dużo różnych konkretnych rzeczy, których nie da się ustawić w zwykłym trybie, np. konto roota zamiast zwykłego użytkownika), tryb rescue (jeżeli się zepsuje to dzięki niemu można uruchomić środowisko naprawcze) oraz tryb automated (przydatny jeśli robimy dużo testów, co chwile trzeba ten system na nowo przeinstalować, to umożliwia zapisywanie opcji jakie wybraliśmy). Można było również ustawić wysoki kontrast
+2.	Wybieram język angielski, ponieważ 1) znam dobrze angielski i uważam, że powinniśmy się przyzwyczajać 2) tak robiliśmy na lekcji i troszkę łatwiej mi wszystko odtworzyć 3) łatwiej znaleźć odpowiedzi po angielsku w internecie
+3.	Domyślnie pojawiają kraje anglojęzyczne, więc wybieram other i szukam Polski. Wybieram ją (jest to ważne, ponieważ później mogę chcieć ściągnąć jakiś plik, pakiet, i wtedy będą podpowiadane polskie serwery). Później mam do wyboru język który będzie później do użytku na maszynie. Nie potrzebuję polskich znaków, a mogą one powodować problem przy ewentualnym odzyskiwaniu plików. Poza tym wszystkie nazwy i tak przeważnie piszę po angielsku. W związku z tym zaznaczam opcję United States. Następnie pojawia się opcja układu klawiatury. Nasze klawiatury są w standardzie amerykańskim, więc wybieram taką opcję (American English).
+4.	Ładują się rzeczy potrzebne do kolejnego etapu instalacji.
+5.	Następnie pojawia się możliwość nadania imienia, nadaję mu imię Lola (bo lubię nazywać komputery). Następnie pojawia się możliwość nazwy domeny, jest to przydatne w firmie, gdy pracujemy na konkretnej domenie. Tu nie ma takiej konieczności, zostawiam pustą.
+6.	Następnie trzeba nadać hasło roota (administratora). Nadałam hasło. Wprowadzam hasło jeszcze raz aby potwierdzić.
+7.	Następnie mam nadać nazwę użytkownika. Podaję swoje imię i nazwisko bo to ja będę z niego korzystać. Następnie nadaję nazwę użytkownika, krysia (bo to moje imie, ja będę z niego korzystać, łatwo mi zapamiętać) oraz hasło do konta (i wprowadzam ponownie żeby potwierdzić)
+8.	Następnie pojawia się partycjonowanie dysku. mamy dostępne opcje:
+a.	guided - use entire disk – używamy jeśli nie wiemy o co chodzi w dzieleniu dysku i chcemy żeby zostało nam zaproponowane jak to robić. Po wybraniu jej możemy wybrać dysk (u mnie tylko jeden). Dalej mamy 3 opcje:
+i.	all files in one partition – tworzy się tylko jedna partycja, będą na niej wszystkie pliki
+ii.	separate /home partition – katalog domowy użytkownika wydzielany jest jako osobna partycja (przydatne gdy wiemy że serwer będzie reinstalowany – wtedy nie będziemy formatować partycji /home a sformatujemy sam system, bez usuwania plików użytkowników)
+iii.	separate /home /var /tmp partitions – w partycji /var zajmują się zazwyczaj logi (warto je oddzielić żeby nie zapchać pamięci). /tmp to przestrzeń na rzeczy tymczasowe (w mojej pracy gdy pobieram pliki potrzebne to ściągnięcia zbioru do formatu .sav właśnie tam pojawiają się pliki)
+b.	guided – use entire disk and set up LVM (Logical volume manager) – dzięki opcji LVM w razie gdy będzie nam się przepełniała pamięć na partycji możemy ją szybko zmienić. LVM Pozwala zebrać kilka dysków, np. ssd, pendrive i stworzyć z tego jedną wspólną przestrzeń. Bez LVM nie możemy rozszerzyć partycji bez restartowania systemu. 
+c.	guided – use entire disk and set encrypted LVM – to samo co poprzednia opcja tylko z szyfrowaniem
+d.	Manual – wszystko ustalamy ręcznie (tę opcję wybieram bo muszę się nauczyć co i jak się robi)
+9.	Zaleca się stworzyć przynajmniej dwie partycje. Jednak zawierać będzie system i wszystkie pliki oraz aplikacje, a druga będzie partycją wymiany (na niej m.in. będą przechowywane pliki tymczasowe w sytuacji jeżeli przekroczymy zasoby wolnej pamięci RAM. Można tam też zapisać pliki bardzo rzadko używane aby zwolnić miejsce na głównym dysku).
+10.	Do wyboru są opcje:
+a.	guided partitioning – wracamy do tego co było wcześniej
+b.	configure ISCSI volumes – możliwość podłączenia dysków poprzez sieć. jest to protokół, który blokowo przesyła dane. Dzięki temu można mieć współdzieloną pamięć masową dla wielu klientów czy serwerów.
+Pod nimi jest dysk (mam jeden, ale oczywiście może być ich więcej). Wybieram go.
+11.	Pojawia się zapytanie czy stworzyć nową pustą tabelę partycji. Tworzę, bo nie mam żadnej jeszcze.
+12.	Robię nową tablicę partycji – mogę utworzyć tylko 4 partycje podstawowe, to ważne (tablica partycji ma tylko 2 bity). Jeśli chcemy więcej, muszą to być partycje logiczne.
+13.	Można stworzyć partycję rozszerzoną. Będzie ona zawsze partycją czwartą – wewnątrz niej znajdują się partycje logiczne.
+14.	Ja będę tworzyła 2 partycje. Stworzyłam maszynę wirtualną, która ma 10GB pamięci, a ze względu na nieco inne przeliczenia Windowa tutaj będzie więcej (10,7 GB). 
+a.	Pierwsza partycja – daję na nią 9,8 GB (wyjaśnienie w punkcie druga partycja), ustawiam ją jako podstawowa ponieważ tu będą m. in. rzeczy do uruchomienia komputera. Ustawiam ją na początku. Później mam to wyboru z jakimi systemami plików jej używać. Do wyboru
+i.	ext4 journaling file system – ulepszenie wersji ext3 (szybszy niż ext3) – wybieram właśnie ten, ponieważ najczęściej się teraz z niego korzysta
+ii.	ext3 journaling file system – ulepszenie wersji ext2 (mniejsza szansa utraty plików przy awarii), wolniejszy
+iii.	ext2 file system – jest raczej przestarzałe, nie wykorzystuje się. można skorzystać jeśli chcemy mieć pewność że wszędzie zadziała
+iv.	btrfs journaling file system – szybki pod względem baz danych, oparty na drzewie binarnym
+v.	JFS journaling file system - 
+vi.	XFS journaling file system – używane na redhat-ach, ułatwia szybsze odzyskiwanie plików po awarii
+vii.	FAT16 file system – używane w DOSie
+viii.	FAT32 file system – używane w DOSie
+ix.	swap area – typ partycji dla partycji wymiany
+x.	physical volume for encryption – w przypadku szyfrowania
+xi.	physical volume for  RAID 
+xii.	physical volume for LVM – w przypadku opcji LVM
+xiii.	do not use partition – można stworzyć partycję i w ogóle jej nie używać
+b.	biorę ext4 (nie ma potrzeby zmiany). Ustawiamy to jako główny system (bo jest pierwsza, coś musi być główne). Nadałam jej nazwę „main” ponieważ to główna partycja. Zostawiam 5% dla roota. zostawiam użytkowanie partycji jako standardowe, bootable flag zostawiam włączoną, bo jest ona obowiązkowa (bios będzie szukał pierwszej partycji z włączoną flagą i z niej uruchomi system) – wszystkie inne powinny mieć wyłączoną flagę.
+c.	druga partycja – partycja wymiany. Jest zasada, że tworzy się ją wielkość 1,5-max 2 razy RAM (żeby w razie co można było cały RAM tu zapisać). Mój RAM to 1GB, więc na partycje wymiany powinnam dać 1,5GB a na pierwszą partycję zostaje mi  9,8GB. Ustawiam ją jako logiczną (nie ma potrzeby ustawiania jako podstawowa, ale można by), oraz używam jej jako swap area (bo specjalnie pod te partycje jest ta opcja), bootable flag zostawiam off. Partycja pojawia się jako piąta (bo 2 3 i 4 są zarezerwowane dla podstawowych)
+15.	Następnie system się instaluje, później pojawia się zapytanie o dodanie kolejnych nośników. My ich nie mamy więc wybieram Nie.
+16.	Potem w liście państw wybieram Polskę (żeby wybrał serwer lustrzany jak najbliżej mnie). Później jest lista konkretnych serwerów – wybieram gdański (jest na PG). W opcji proxy nie podaję nic (nie mam nic do ustawienia).
+17.	Nie zgadzam się na anonimowe wysyłanie moich danych, bo wolę nie.
+18.	 Przez przypadek zainstalowałam interfejsy graficzne Debian Desktop Environment i GNOME, chciałam xface, postaram się to później zmienić. Różnią się one wyglądem:
+a.	GNOME – mi się podoba, jest najpopularniejszy, jest łatwy w użyciu
+b.	Xface – najlżejsze środowisko, łatwy w obsłudze, jednak interfejs wydaje się przestarzały
+c.	KDE – oprócz środowiska graficznego ma zbiór dedykowanych aplikacji (może wydawać się skomplikowany dla początkujących)
+d.	MATE – oparty na bazie GNOME2, który wzbudził niezadowolenie wśród użytkowników. Zużywa małe zasoby pamięci, polecany do starszych urządzeń
+e.	Cinnaom – wygląda trochę jak windowsy, również jako odpowiedź na niezadowolenie GNOM3. Zużywa sporo pamięci, może nie być w pełni stabilny
+f.	LXDE – szybki, jest również energooszczędny, charakteryzuje się niskim zużyciem zasobów. Bardzo wydajny
+g.	LXQT – następca LXDE, ulepszona wersja
+h.	standard system utilities – można bez tego instalować, a potem doinstalować tylko wybrane (nie wszystkie co tu by się zainstalowały), ale część z nich jest potrzebna. Dla mnie wygodniej zainstalować je wszystkie od razu
+i.	można wybrać wiele, domyślnie chyba odpali się ten najwyżej, ale później można to zmienić. Można wybrać kilka (wszystkie zostaną zainstalowane)
+19.	 GRUB boot loader – potrzebny do uruchomienia systemu operacyjnego, bez niego system się nie uruchomi. Nie potrzeba go jedynie gdy mamy już jakiś boot loader na swoim komputerze (ja nie mam więc instaluje i wybieram jako urządzenie dysk, mam do wyboru tylko jeden i na nim instaluje).
+20.	Instalacja się skończyła, program się uruchamia 😊 Pojawiło się pole do logowania, zalogowałam się na swoje konto.
+21.	Później udało mi się zainstalować i zmienić środowisko graficzne na xfce4.
