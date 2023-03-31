@@ -2,170 +2,410 @@ Instrukcja instalacji Linux Debian
 
 1. Pobieram VirtualBox ze strony virtualbox.org.
 2. Pobieram obraz wirtualnej maszyny ze strony debian.org.
-Pobieram mały obraz, gdyż nie ma potrzeby pobierania dużego, który przydaje się w sytuacji, kiedy nie ma połączenia z siecią (np. na statku).
+Pobieram mały obraz, gdyż nie ma potrzeby pobierania dużego, 
+który przydaje się w sytuacji,  kiedy nie ma połączenia z siecią 
+(np. na statku).
 3. Instaluję Virtualbox na komputerze domowym.
-4. Po zainstalowaniu virtualbox-a naciskam przycisk "Nowa maszyna wirtualna" i wpisuję: nazwę maszyny debian oraz wybieram system 64-bitowy, ponieważ taki procesor ma mój komputer.
-5. W następnym kroku podaję ilość pamięci opieram się na wytycznych ze strony debian.org w zakresie minimalnych wymagań sprzętowych. W związku z tym, że będę wybieram wersję bez środowiska graficznego, wybieram wartość rekomendowaną w wytycznych: 512 Mb RAM.
-Wybór wersji bez środowiska graficznego podyktowany jest tym, bo mam dość stary komputer i ograniczonych zasobach, a z drugiej strony nie mam potrzeby korzystania ze środowiska graficznego.
+4. Po zainstalowaniu virtualbox-a naciskam przycisk "Nowa maszyna 
+wirtualna" i wpisuję: nazwę maszyny debian oraz wybieram 
+system 64-bitowy, ponieważ taki procesor ma mój komputer.
+5. W następnym kroku podaję ilość pamięci opieram się na wytycznych 
+ze strony debian.org w zakresie minimalnych wymagań sprzętowych. 
+W związku z tym, że będę wybieram wersję bez środowiska graficznego, 
+wybieram wartość rekomendowaną w wytycznych: 512 Mb RAM.
+Wybór wersji bez środowiska graficznego podyktowany jest tym, 
+bo mam dość stary komputer i ograniczonych zasobach, a z drugiej strony 
+nie mam potrzeby korzystania ze środowiska graficznego.
 6. W następnym kroku tworzę nowy twardy dysk. 
-7. Wybieram formatu dysku wirtualnego - VDI, który jest najbardziej kompatybilny, dzięki czemu mam nadzieję, nie będzie powodował problemów.
-Dostępne są jeszcze formaty: VHD używane przez rozwiązania microsoftowe, czy VMDK, stosowany w oprogramowaniu wirtualizacyjnym VMWare.
-8. W następnej zakładce określam w jaki sposób ma być przydzielany dysk: dynamicznie, czy statycznie. Wybieram dynamiczny przydział, gdyż nie mam potrzeby robić stałej alokacji.
-9. W następnym kroku wybieram lokalizację i rozmiar twardego dysku. Zgodnie z rekomendacjami wytycznych w zakresie minimalnych wymagań sprzętowych wybieram rozmiar 2GB.
+7. Wybieram formatu dysku wirtualnego - VDI, który jest najbardziej 
+kompatybilny, dzięki czemu mam nadzieję, nie będzie powodował problemów. 
+Dostępne są jeszcze formaty: VHD używane przez rozwiązania microsoftowe,
+ czy VMDK, stosowany w oprogramowaniu wirtualizacyjnym VMWare.
+8. W następnej zakładce określam w jaki sposób ma być przydzielany dysk:
+ dynamicznie, czy statycznie. Wybieram dynamiczny przydział, 
+ gdyż nie mam potrzeby robić stałej alokacji.
+9. W następnym kroku wybieram lokalizację i rozmiar twardego dysku. 
+Zgodnie z rekomendacjami wytycznych w zakresie minimalnych wymagań 
+sprzętowych wybieram rozmiar 2GB.
 10. Naciśnięcie przycisku "Utwórz" powoduje utworzenie wirtualnej maszyny.
 
 Po utworzeniu wirtualnej maszyny przechodzę do Ustawień. 
-11. Wybieram ustawienia Ogólne, Zaawansowane. Pozostawiam folder migawek bez zmian, gdyż są one kluczowe dla bezpieczeństwa i w przypadku jakiejś katastrofy pozwalają wróć do stany przed niefortunnym zdarzeniem.
-12. Opcje współdzielony schowek i przeglądanie i upuszczanie pozostawiam wyłączone, gdyż nie mam potrzeby korzystania z nich, tym bardziej że druga z nich nie ma zastosowania w środowisku bez grafiki, więc nie ma najmniejszego sensu jej włączać.
-13. Zakładka szyfrowanie dysków: w obecnej wersji, która jest wersją demonstracyjną i ma na celu nauczenie się instalacji, nie mam potrzeby szyfrowania dysku, więc nie włączam tej opcji. Byłaby jednak przydatna w przedsiębiorstwach czy jednostkach administracji samorządowej lub centralnej, gdzie polityka wewnętrzna w zakresie bezpieczeństwa określa procedury szyfrowania danych i trzeba się do nich dostosować.
+11. Wybieram ustawienia Ogólne, Zaawansowane. Pozostawiam folder migawek 
+bez zmian, gdyż są one kluczowe dla bezpieczeństwa i w przypadku jakiejś 
+katastrofy pozwalają wróć do stany przed niefortunnym zdarzeniem.
+12. Opcje współdzielony schowek i przeglądanie i upuszczanie 
+pozostawiam wyłączone, gdyż nie mam potrzeby korzystania z nich, 
+tym bardziej że druga z nich nie ma zastosowania w środowisku bez grafiki,
+ więc nie ma najmniejszego sensu jej włączać.
+13. Zakładka szyfrowanie dysków: w obecnej wersji, 
+która jest wersją demonstracyjną i ma na celu nauczenie się instalacji, 
+nie mam potrzeby szyfrowania dysku, więc nie włączam tej opcji. 
+Byłaby jednak przydatna w przedsiębiorstwach czy jednostkach 
+administracji samorządowej lub centralnej, gdzie polityka wewnętrzna 
+w zakresie bezpieczeństwa określa procedury szyfrowania danych 
+i trzeba się do nich dostosować.
 14. Wybieram ustawienia System, Płyta główna.
-W tym miejscu mogę zmienić wielkość RAM, ale pozostawiam wartość rekomendowaną pozyskaną z wytycznych.
-15. Kolejność bootowania, czyli kolejność uruchamiania. Możemy wybrać do jakich urządzeń będzie miała dostęp maszyna wirtualna i w jakiej kolejności powinna próbować się uruchomić.
+W tym miejscu mogę zmienić wielkość RAM, ale pozostawiam wartość 
+rekomendowaną pozyskaną z wytycznych.
+15. Kolejność bootowania, czyli kolejność uruchamiania. 
+Możemy wybrać do jakich urządzeń będzie miała dostęp maszyna wirtualna 
+i w jakiej kolejności powinna próbować się uruchomić.
 nie mamy dyskietek – wyłączam odznaczenie,
-napęd optyczny – nie używam domyślnie napędu optycznego. mamy obraz iso, ze strony debiana włożymy go do napędu optycznego, instalacja będzie jednorazowa, nie chcemy, aby komputer domyślnie uruchamiał się z napędu optycznego. wyłączamy odznaczenie,
-dysk twardy – pozostawiam włączone odznaczenie i przesuwam go na pierwsze miejsce, czyli domyślnie ustawienie, że komputer uruchamia się z dysku twardego.
+napęd optyczny – nie używam domyślnie napędu optycznego. mamy obraz iso,
+ ze strony debiana włożymy go do napędu optycznego, 
+ instalacja będzie jednorazowa, nie chcemy, aby komputer domyślnie 
+uruchamiał się z napędu optycznego - wyłączamy odznaczenie,
+dysk twardy – pozostawiam włączone odznaczenie i przesuwam 
+go na pierwsze miejsce, czyli domyślnie ustawienie, że komputer 
+uruchamia się z dysku twardego.
 sieć - z sieci nie będę uruchamiać – wyłączam odznaczenie.
-16. Chipset - opcja pozwala na wybranie wirtualnego chipsetu. Pozostawiam ustawienie domyślne PIIX3.
-17. Urządzenie wskazujące - będę pracować w środowisku bez grafiki, więc ustawiam najprostszą możliwą opcję: myszPS/2.
-18. Rozszerzone właściwości - pozostawiam włączoną opcję Input Output APIC. Jest ona niezbędna w przypadku systemów Windowsowskich i odpowiada za kontrolę przerwań systemowych. Instaluję Linuxa i mogę tę opcję zostawić włączoną i tak robię.
-19. Opcja EFI - zostawiam wyłączoną, włączenie jej jest przydatne, gdy używa się standardowych BIOS-ów.
-20. UTC time - opcja, która uruchamia podawanie czasu w formie UTC, jak jest wyłączona to mamy czas, zgodny z tym co podaje maszyna fizyczna. U mnie będzie wyłączona.
-21. Zakładka procesor: pozwala określić ile procesorów będzie przypisanych do danej maszyny wirtualnej oraz procentową wielkość czasu procesora zarezerwowaną dla danego hosta. Mam 1 procesor, więc zostaje 1 i 100% czasu.
-22. Zakładka Akceleracja - znajdują się tam opcje sprzętowej akceleracji procesów, zapewnione przez procesor fizyczny komputera. W ustawieniu domyślnym są włączone i dla większości dostępnych na rynku procesorów wsparcie sprzętowe jest zaimplementowane.  Opcja - wirtualizacja sprzętowa - włącz zagnieżdżone stronicowanie - umożliwia zagnieżdżenie stronicowania, powoduje, że wszystko działa szybciej. Domyślnie jest włączona i tak też je pozostawiam. 
-23. Ekran - mamy możliwość zmiany pamięci dla wirtualnej karty graficznej oraz zmiany ilości monitorów, jeżeli ktoś ma podłączonych więcej niż 1. Pozostawiam niezmienione wielkości, podobnie jak ustawienia kontrolera grafiki na VMSVGA, przeznaczonego dla systemów Linuxowych. VBoxSVGA oraz VBoxVGA przeznaczone do systemów Windows.
+16. Chipset - opcja pozwala na wybranie wirtualnego chipsetu. 
+Pozostawiam ustawienie domyślne PIIX3.
+17. Urządzenie wskazujące - będę pracować w środowisku bez grafiki, 
+więc ustawiam najprostszą możliwą opcję: 
+myszPS/2.
+18. Rozszerzone właściwości - pozostawiam włączoną opcję Input Output APIC. 
+Jest ona niezbędna w przypadku systemów Windowsowskich i odpowiada 
+za kontrolę przerwań systemowych. Instaluję Linuxa i mogę tę opcję 
+zostawić włączoną i tak robię.
+19. Opcja EFI - zostawiam wyłączoną, włączenie tej opcji wymaga 
+podawania dokładnych informacji, które należy wpisać, 
+aby umożliwić uruchomienie systemu.
+20. UTC time - opcja, która uruchamia podawanie czasu w formie UTC, 
+jak jest wyłączona to mamy czas, zgodny z tym co podaje maszyna fizyczna.
+ U mnie będzie wyłączona.
+21. Zakładka procesor: pozwala określić ile procesorów będzie 
+przypisanych do danej maszyny wirtualnej oraz procentową wielkość 
+czasu procesora zarezerwowaną dla danego hosta. Mam 1 procesor, 
+więc zostaje 1 i 100% czasu.
+22. Zakładka Akceleracja - znajdują się tam opcje sprzętowej akceleracji 
+procesów, zapewnione przez procesor fizyczny komputera. 
+W ustawieniu domyślnym są włączone i dla większości dostępnych na rynku 
+procesorów wsparcie sprzętowe jest zaimplementowane.  
+Opcja - wirtualizacja sprzętowa - włącz zagnieżdżone stronicowanie 
+- umożliwia zagnieżdżenie stronicowania, powoduje, że wszystko działa 
+szybciej. Domyślnie jest włączona i tak też je pozostawiam. 
+23. Ekran - mamy możliwość zmiany pamięci dla wirtualnej karty graficznej 
+oraz zmiany ilości monitorów, jeżeli ktoś ma podłączonych więcej niż 1.
+ Pozostawiam niezmienione wielkości, podobnie jak ustawienia kontrolera 
+ grafiki na VMSVGA, przeznaczonego dla systemów Linuxowych. 
+VBoxSVGA oraz VBoxVGA przeznaczone do systemów Windows.
 24. Zdalny pulpit - nie będzie mi potrzebne, więc pozostawiam wyłączone.
 25. Nagrywanie - nie będę korzystać z tej opcji - pozostawiam wyłączone.
-26. Pamięć - jest tu kontroler SATA, dysk, który jest podłączony do portu od SATA0 do SATA29, czyli możliwość 30 dysków do podłączenia. Jest też kontroler IDE - daje możliwość dodatnia nowego dysku optycznego i dysku twardego. W tym miejscu dodaję obraz wirtualnej maszyny, pobranej wcześniej ze strony debian.org.
+26. Pamięć - jest tu kontroler SATA, dysk, który jest podłączony 
+do portu od SATA0 do SATA29, czyli możliwość 30 dysków do podłączenia. 
+Jest też kontroler IDE - daje możliwość dodatnia nowego dysku optycznego 
+i dysku twardego. W tym miejscu dodaję obraz wirtualnej maszyny, 
+pobranej wcześniej ze strony debian.org.
 27. Dźwięk - nie będzie mi potrzebny, więc pozostawiam wyłączony.
-28. Sieć - są dostępne cztery karty sieciowe. Przeważnie włączona jest jedna i tak pozostawiam. Wybieram ustawienie domyślne - karta NAT, która działa tak, że gdy maszyna wyśle do sieci wiadomość i będzie otwierać jakąś stronę, to komputer na którym jest zainstalowana będzie pełnił rolę routera, zamieniając adres maszyny na swój. Inne opcje to: mostkowana karta sieciowa - maszyna wirtualna dostaje adres podobnie jak dany komputer, komputer będzie miał z nią łączność, z punktu widzenia sieci będzie z nim równoległa; sieć wewnętrzna - to kilka maszyn mających wpisaną taką samą nazwę sieci wewnętrznej, komunikujących się z sobą; karta sieci izolowanej - w takim przypadku to komputer dostaje wirtualną kartę sieciową, co pozwala na komunikację z wirtualnymi maszynami; rodzajowy sterownik - stosuje się przy konstruowaniu sieci VDE; sieć NAT -pozwala utworzyć wewnętrzną sieć; niepodłączona - interfejs pozostaje niepodłączony pomimo, że został utworzony. Jako typ karty sieciowej pozostawiam Intel PRO/1000 MT Desktop (82540EM), ponieważ instalację przeprowadzam w celu nauki i nie będę potrzebować dodatkowych funkcji. Przekierowanie portów - nie ustawiam, gdyż tego nie potrzebuję. 
-29. Porty szeregowe - przydatne przy konieczności konfiguracji urządzeń sieciowych lub do komunikacji w obrębie komputera. Nie potrzebuję korzystać z takich rozwiązań, dlatego opcje są wyłączone.
-30. USB - domyślnie jest włączony i pozwala przekierować urządzenie do wnętrza maszyny. Opcja ta nie będzie mi potrzebna, więc ją wyłączam.
-31. Udostępnione foldery - przydatne w celu zapewnienia komunikacji z danym komputerem. Nie będę korzystać z takiej możliwości, więc nic nie uzupełniam z tej sekcji.
-32. Interfejs użytkownika - jest to interfejs od Virtualboxa i nie będę nic w nim zmieniać. 
+28. Sieć - są dostępne cztery karty sieciowe. Przeważnie włączona jest 
+jedna i tak pozostawiam. Wybieram ustawienie domyślne - karta NAT, 
+która działa tak, że gdy maszyna wyśle do sieci wiadomość i będzie 
+otwierać jakąś stronę, to komputer na którym jest zainstalowana 
+będzie pełnił rolę routera, zamieniając adres maszyny na swój. 
+Inne opcje to: 
+mostkowana karta sieciowa - maszyna wirtualna dostaje adres 
+podobnie jak dany komputer, komputer będzie miał z nią łączność, 
+z punktu widzenia sieci będzie z nim równoległa; 
+sieć wewnętrzna - to kilka maszyn mających wpisaną taką samą nazwę 
+sieci wewnętrznej, komunikujących się z sobą; 
+karta sieci izolowanej - w takim przypadku to komputer dostaje wirtualną
+kartę sieciową, co pozwala na komunikację z wirtualnymi maszynami; 
+rodzajowy sterownik - stosuje się przy konstruowaniu sieci VDE; 
+sieć NAT -pozwala utworzyć wewnętrzną sieć; 
+niepodłączona - interfejs pozostaje niepodłączony pomimo, że został utworzony. 
+Jako typ karty sieciowej pozostawiam Intel PRO/1000 MT Desktop (82540EM),
+ ponieważ instalację przeprowadzam w celu nauki i nie będę potrzebować 
+ datkowych funkcji. 
+Przekierowanie portów - nie ustawiam, gdyż tego nie potrzebuję. 
+29. Porty szeregowe - przydatne przy konieczności konfiguracji urządzeń 
+sieciowych lub do komunikacji w obrębie komputera. 
+Nie potrzebuję korzystać z takich rozwiązań, dlatego opcje są wyłączone.
+30. USB - domyślnie jest włączony i pozwala przekierować urządzenie 
+do wnętrza maszyny. Opcja ta nie będzie mi potrzebna, więc ją wyłączam.
+31. Udostępnione foldery - przydatne w celu zapewnienia komunikacji 
+z danym komputerem. Nie będę korzystać z takiej możliwości, 
+więc nic nie uzupełniam z tej sekcji.
+32. Interfejs użytkownika - jest to interfejs od Virtualboxa 
+i nie będę nic w nim zmieniać. 
 33. Zapisuję wprowadzone zmiany.
 
 Uruchomienie maszyny wirtualnej.
-34. Przy uruchomieniu maszyny są dostępne trzy opcje startu: zwykły, bezgłowy i oddzielny. Wybieram start oddzielny. Maszyna uruchamia się. Wchodzę do opcji: maszyna, odłącz interfejs graficzny. Opcja byłaby niedostępna przy starcie zwykłym, a dzięki temu mogę zamknąć okienko i nie wyłączyć maszyny. Klikam na Pokaż (zielona strzałka), Urządzenia, Napędy optyczne i wybieram debian - wkładając do napędu optycznego obraz maszyny. Wybieram Maszyna i restartuję maszynę. 
-W chwili gdy pojawi się logo Virtualboxa naciskam F12 w celu włączenia menu bootowania jednorazowego. Wybieram uruchomienie z płyty, podczas gdy domyślne pozostaje uruchomienie z twardego dysku. Kiedy pojawią się dostępne opcje wybieramy c) CD-ROM i pojawia się menu instalatora debiana.
+34. Przy uruchomieniu maszyny są dostępne trzy opcje startu: 
+zwykły, bezgłowy i oddzielny. 
+Wybieram start oddzielny. Maszyna uruchamia się. Wchodzę do opcji: 
+maszyna, odłącz interfejs graficzny. 
+Opcja byłaby niedostępna przy starcie zwykłym, a dzięki temu mogę 
+zamknąć okienko i nie wyłączyć maszyny. 
+Klikam na Pokaż (zielona strzałka), Urządzenia, Napędy optyczne 
+i wybieram debian - wkładając do napędu optycznego obraz maszyny. 
+Wybieram Maszyna i restartuję maszynę. 
+W chwili gdy pojawi się logo Virtualboxa naciskam F12 w celu włączenia 
+menu bootowania jednorazowego. 
+Wybieram uruchomienie z płyty, podczas gdy domyślne pozostaje 
+uruchomienie z twardego dysku. 
+Kiedy pojawią się dostępne opcje wybieramy c) CD-ROM i pojawia się 
+menu instalatora debiana.
 35. Dostępne są następujące opcje:
 Graphical install - instalacja graficzna
 Install - instalacja tekstowa
 Advanced options - opcje zaawansowane
-Accessible dark contrast installer menu - możliwość ustawienia dużego kontrastu, przy słabym wzroku
+Accessible dark contrast installer menu - możliwość ustawienia 
+dużego kontrastu, przy słabym wzroku
 Help - pomoc
-Install with speech synthesis - instalacja testowa z włączonym syntezatorem mowy.
+Install with speech synthesis - instalacja testowa z włączonym 
+syntezatorem mowy.
 
 W ustawieniach Advanced options dostępne są następujące opcje: 
-Graphical expert install - instalacja ekspercka graficzna - daje możliwość przeskakiwania do różnych sekcji instalacji, zmianę dodakowych opcji, 
-Graphical rescue mode - graficzny tryb ratunkowy- jeżeli system się zepsuje i jest konieczność naprawy, to tutaj można uruchomić środowisko naprawcze,
-Graphical automated install - zautomatyzowana instalacja graficzna - przydatna w przypadku konieczności instalacji kilku komputerów
+Graphical expert install - instalacja ekspercka graficzna 
+- daje możliwość przeskakiwania do różnych sekcji instalacji, 
+zmianę dodakowych opcji, 
+Graphical rescue mode - graficzny tryb ratunkowy- jeżeli system 
+się zepsuje i jest konieczność naprawy, to tutaj można uruchomić 
+środowisko naprawcze,
+Graphical automated install - zautomatyzowana instalacja graficzna 
+- przydatna w przypadku konieczności instalacji kilku komputerów
 Expert install - instalacja ekspercka tekstowa
 Rescue mode - tekstowy tryb ratunkowy
 Automated install  - zautomatyzowana instalacja tekstowa
 Speech–enabled advenced options - zaawansowane opcje rozpoznawania mowy -
 przydatne opcje przy instalacji z wykorzystaniem syntezatora mowy.
 
-36. Wybieram instalację tekstową, gdyż chcę jak najwięcej nauczyć się o linux-ie i instalacji tego systemu, a instalacja tekstowa daje mi taką możliwość. Oprócz tego jest szybsza, co również ma dla mnie znaczenie.
-37. W kolejnym kroku jako język instalacji wybieram język angielski, ponieważ w tym języku jest łatwiej znaleźć w sieci odpowiedź ba pytanie w przypadku pojawienia się problemów.
-38. Dalej wybieram lokalizację i w tym przypadku jest to Polska, ponieważ w dalszej kolejności będzie to wykorzystane do podpowiedzi nazw adresów serwerów, skąd będę pobierać pakiety z internetu.
-39. W kolejnym kroku wybieram klawiaturę. Wybieram United States ponieważ chcę zwiększyć niezawodność, a polskie znaki diakrytyczne w przypadku wystąpienia błędu na dysku mogą spowodować, że w ich miejsce pojawią się krzaczki, co może powodować problem z odzyskaniem danych. Dalej wybieramy standard klawiatury American English, ponieważ w Polsce używane są klawiatury w standardzie amerykańskim.
+36. Wybieram instalację tekstową, gdyż chcę jak najwięcej nauczyć się 
+o linux-ie i instalacji tego systemu, a instalacja tekstowa daje mi 
+taką możliwość. Oprócz tego jest szybsza, co również ma dla mnie znaczenie.
+37. W kolejnym kroku jako język instalacji wybieram język angielski, 
+ponieważ w tym języku jest łatwiej znaleźć w sieci odpowiedź na pytanie 
+w przypadku pojawienia się problemów.
+38. Dalej wybieram lokalizację i w tym przypadku jest to Polska, 
+ponieważ w dalszej kolejności będzie to wykorzystane do podpowiedzi 
+nazw adresów serwerów, skąd będę pobierać pakiety z internetu.
+39. W kolejnym kroku wybieram klawiaturę. Wybieram United States 
+ponieważ chcę zwiększyć niezawodność, a polskie znaki diakrytyczne 
+w przypadku wystąpienia błędu na dysku mogą spowodować, że w ich miejsce 
+pojawią się krzaczki, co może powodować problem z odzyskaniem danych. 
+Dalej wybieramy standard klawiatury American English, ponieważ w Polsce 
+używane są klawiatury w standardzie amerykańskim.
 40. Podaję nazwę komputera: debian.
-41. Nazwę domeny zostawiam pustą, opcja ta przydaje się gdy miałabym ustawioną domenę w firmie i mogłabym wówczas wpisać ją w tej sekcji.
+41. Nazwę domeny zostawiam pustą, opcja ta przydaje się gdy miałabym 
+ustawioną domenę w firmie i mogłabym wówczas wpisać ją w tej sekcji.
 42. Kolejnym krokiem jest ustawienie hasła administratora.
 43. Dalej wpisuję nazwę użytkownika, wpisuję swoje imię.
 44. W kolejnych dwóch krokach wpisuję login i hasło użytkownika.
-45. Kolejnym etapem jest partycjonowanie dysku, które może odbywać się następującymi metodami: 
+45. Kolejnym etapem jest partycjonowanie dysku, które może odbywać się 
+następującymi metodami: 
 
-Guided – use entire disk – instalator podpowiada jak można podzielić dysk. Po wybraniu tej opcji trzeba określamy, który dysk ma być partycjonowany, a następnie mamy trzy opcje:
-- wszystkie pliki na jednej partycji o rekomendowane dla nowych użytkowników, którzy nie mieli do czynienia z linux-em i chodzi o ułatwienie zadania,
-- wydzielenie katalogów domowych użytkowników na jedną partycję - przydatne w sytuacji planowanego reinstalowania serwera w przypadku wielu użytkowników systemu. Osobna partycji umożliwi im bezproblemową pracę w czasie formatowania samego systemu.
-- wydzielenie partycji dla home, var, tmp - przydatne, gdyż var znajdują się logi, które mogą zajmować dużo miejsca i wyodrębnienie dla nich partycji ma zapobiec zapchaniu systemu logami
+Guided – use entire disk – instalator podpowiada jak można podzielić dysk. 
+Po wybraniu tej opcji trzeba określamy, który dysk ma być partycjonowany, 
+a następnie mamy trzy opcje:
+- wszystkie pliki na jednej partycji o rekomendowane dla nowych użytkowników, 
+którzy nie mieli do czynienia z linux-em i chodzi o ułatwienie zadania,
+- wydzielenie katalogów domowych użytkowników na jedną partycję - 
+przydatne w sytuacji planowanego reinstalowania serwera w przypadku 
+wielu użytkowników systemu. Osobna partycja umożliwi im bezproblemową 
+pracę po reinstalacji systemu operacyjnego.
+- wydzielenie partycji dla home, var/log, tmp - przydatne, 
+gdyż var znajdują się logi, które mogą zajmować dużo miejsca 
+i wyodrębnienie dla nich osobnej partycji var/log 
+zapobiegnie zapchaniu systemu logami.
 
-Guided – use entire disk and set up LVM - jest to rozwiązane, które pozwala zebrać różne dyski różnych typów i zrobić jedną dużą przestrzeń, pod kontrolą LVM, którą możemy dynamicznie rozszerzyć potrzeby restartowania systemu. Wymaga to pewnego doświadczenia w pracy z Linuxem i nie jest zalecane dla jego początkujących użytkowników.
+Guided – use entire disk and set up LVM - jest to rozwiązane, 
+które pozwala zebrać różne dyski różnych typów i zrobić jedną dużą 
+przestrzeń, pod kontrolą LVM, którą możemy dynamicznie rozszerzyć bez potrzeby 
+restartowania systemu. Wymaga to pewnego doświadczenia w pracy z Linuxem 
+i nie jest zalecane dla jego początkujących użytkowników.
 
-Guided – use entire disk and set up encrypted  LVM - rozwiązanie identyczne z poprzednim, z dodatkowym szyfrowaniem. Wymaga to zwrócenia uwagi na to co jest szyfrowane, jeżeli szyfrowanie jest włączone, to przestrzeń wymiany również musi być szyfrowana.
+Guided – use entire disk and set up encrypted  LVM - rozwiązanie identyczne 
+z poprzednim, z dodatkowym szyfrowaniem. Wymaga to zwrócenia uwagi na to 
+co jest szyfrowane, jeżeli szyfrowanie jest włączone, 
+to przestrzeń wymiany również musi być szyfrowana.
 
 Manual - opcja, którą wybieram, gdyż chcę nauczyć się partycjonowania krok po kroku.
 
 46. Wybieram dysk, który mam i zatwierdzam.
-47. Potwierdzam, że chcę utworzyć nową tablicę partycji na dysku, gdyż bez tablicy partycji nie jestem w stanie zapisać informacji o partycjach na dysku.
-48. Tworzę nową partycję. Mam 2GB twardego dysku i wybrałam 512MB RAM, więc przyjmuję, 1GB (wg zasady: od 1,5 do 2 x RAM) na partycję podstawową i pozostałą część na partycję wymiany. Chodzi o możliwość zapisania całego RAM na jednej partycji w przypadku zaistnienia takiej potrzeby.
-49.  Pierwszą partycję wybieram jako Podstawową/Primary, bo znajdują się na niej rzeczy potrzebne do uruchomienia komputera.
-50. Ustawiam, by znalazła się na początku twardego dysku i wybieram system plików na Ext4. Jest to wersja najnowsza spośród pozostałych dwóch (Ext2, Ext3) o lepszej wydajności w stosunku do poprzedników oraz większych limitach pojemności niż one. Posiada mechanizm księgowania, który obniża ryzyko utraty danych. Starsze wersje są mniej wydajne, a Ext2 nie ma księgowania. Mozna wybrać jeszcze: BtrFS - system najbardziej zaawansowany, ma wbudowane zarządzanie woluminami, automatyczną naprawą uszkodzonych danych, JFS - bardziej wydajny niż Ext4, ale podobny, ma księgowanie, XFS - też podobny do Ext4, ma dobrą wydajność dla plików większych, za to gorszą dla dużej ilości plików małych, dobry do zastosowań serwerowych, FAT16 - system używanyh w starszych wersjach Windows oraz dos-ie, FAT32 - wersja nowsza niż FAT16, swap area -  typ partycji który się używa do przestrzeni wymiany.
+47. Potwierdzam, że chcę utworzyć nową tablicę partycji na dysku, gdyż 
+bez tablicy partycji nie jestem w stanie zapisać informacji o partycjach na dysku.
+48. Tworzę nową partycję. Mam 2GB twardego dysku i wybrałam 512MB RAM, 
+więc przyjmuję, 1GB (wg zasady: od 1,5 do 2 x RAM) na partycję podstawową 
+i pozostałą część na partycję wymiany. Chodzi o możliwość zapisania całego RAM 
+na jednej partycji w przypadku zaistnienia takiej potrzeby.
+49.  Pierwszą partycję wybieram jako Podstawową/Primary, 
+bo znajdują się na niej rzeczy potrzebne do uruchomienia komputera.
+50. Ustawiam, by znalazła się na początku twardego dysku i wybieram 
+system plików na Ext4. Jest to wersja najnowsza spośród pozostałych dwóch 
+(Ext2, Ext3) o lepszej wydajności w stosunku 
+do poprzedników oraz większych limitach pojemności niż one. 
+Posiada mechanizm księgowania, który obniża ryzyko utraty danych. 
+Starsze wersje są mniej wydajne, a Ext2 nie ma księgowania. Mozna wybrać jeszcze: 
+BtrFS - system najbardziej zaawansowany, ma wbudowane zarządzanie woluminami, 
+automatyczną naprawą uszkodzonych danych, 
+JFS - bardziej wydajny niż Ext4, ale podobny, ma księgowanie, 
+XFS - też podobny do Ext4, ma dobrą wydajność dla plików większych, 
+za to gorszą dla dużej ilości plików małych, dobry do zastosowań serwerowych, 
+FAT16 - system używanyh w starszych wersjach Windows oraz dos-ie, 
+FAT32 - wersja nowsza niż FAT16, 
+swap area -  typ partycji który się używa do przestrzeni wymiany.
 51. Punkt montowania zostawiam jako główny system.
-52. Opcję montowania zostawiam domyślną, Dostępne możliwe opcje podaję za źródłem: https://manpages.ubuntu.com/manpages/xenial/pl/man8/mount.8.html#opcje%20montowania%20do%20ext4
+52. Opcję montowania zostawiam domyślną, Dostępne możliwe opcje podaję 
+za źródłem: 
+https://manpages.ubuntu.com/manpages/xenial/pl/man8/mount.8.html#opcje%20montowania%20do%20ext4
 
 "journal_checksum
-Włącza tworzenie sum kontrolnych transakcji dziennika. Pozwala to na wykrycie błędów w jądrze przez kod odzyskiwania w e2fsck i samo jądro. Jest to zmiana kompatybilna, ignorowana przez starsze jądra.
+Włącza tworzenie sum kontrolnych transakcji dziennika. Pozwala to na 
+wykrycie błędów w jądrze przez kod odzyskiwania w e2fsck i samo jądro. 
+Jest to zmiana kompatybilna, ignorowana przez starsze jądra.
 
 journal_async_commit
-Zatwierdzany blok może być zapisany na dysk bez czekania na bloki deskryptora. Jeśli jest włączona, starsze jądra nie mogą zamontować danego urządzenia. Opcja włącza wewnętrznie również "journal_checksum".
+Zatwierdzany blok może być zapisany na dysk bez czekania na bloki deskryptora. 
+Jeśli jest włączona, starsze jądra nie mogą zamontować danego urządzenia. 
+Opcja włącza wewnętrznie również "journal_checksum".
 
 journal=update
 Aktualizuje dziennik systemu plików ext4 do obecnego formatu.
 
 barrier=0 / barrier=1 / barrier / nobarrier
-Włącza/wyłącza wykorzystanie barier zapisu przy kodzie jbd. barrier=0 wyłącza ją, a barrier=1 włącza. Opcja wymaga stosu wejścia/wyjścia zdolnego obsłużyć bariery; jeśli jbd otrzyma błąd przy zapisie barier wyłączy tę opcję ponownie, wypisując ostrzeżenie. Bariery zapisu wymuszają poprawną kolejność wpisów dziennika na dysku, czyniąc ulotne bufory zapisu dysku bezpieczne w użyciu, z pewnym obniżeniem wydajności. Jeśli dyski mają w jakiś sposób zabezpieczone zasilanie, to wyłączenie barier może w bezpieczny sposób poprawić wydajność. Do włączenia lub wyłączenia barier można również użyć opcji montowania, odpowiednio, "barrier" i "nobarrier",aby zachować spójność z innymi opcjami montowania ext4.
+Włącza/wyłącza wykorzystanie barier zapisu przy kodzie jbd. 
+barrier=0 wyłącza ją, a barrier=1 włącza. 
+Opcja wymaga stosu wejścia/wyjścia zdolnego obsłużyć bariery; 
+jeśli jbd otrzyma błąd przy zapisie barier wyłączy tę opcję ponownie, 
+wypisując ostrzeżenie. Bariery zapisu wymuszają poprawną kolejność wpisów 
+dziennika na dysku, czyniąc ulotne bufory zapisu dysku bezpieczne w użyciu, 
+z pewnym obniżeniem wydajności. Jeśli dyski mają w jakiś sposób 
+zabezpieczone zasilanie, to wyłączenie barier może w bezpieczny sposób poprawić 
+wydajność. Do włączenia lub wyłączenia barier można również użyć 
+opcji montowania, odpowiednio, "barrier" i "nobarrier",
+aby zachować spójność z innymi opcjami montowania ext4.
 
 Domyślnie, system plików ext4 posiada włączone bariery zapisu.
 
 inode_readahead=n
-Ten parametr kontroluje maksymalną liczbę bloków tablicy i-węzłów, które algorytm czytania z wyprzedzeniem tablicy i-węzłów ext4 będzie ładował wstępnie do podręcznego buforu. Domyślną wartością są 32 bloki.
+Ten parametr kontroluje maksymalną liczbę bloków tablicy i-węzłów, 
+które algorytm czytania z wyprzedzeniem tablicy i-węzłów ext4 będzie 
+ładował wstępnie do podręcznego buforu. 
+Domyślną wartością są 32 bloki.
 
 stripe=n
-Liczba bloków systemu plików, które mballoc będzie próbował używać do rozmiaru alokowania i wyrównywania. Do systemów RAID 5/6 powinna być to liczba dysków z danymi * rozmiar części (chunk) RAID w blokach systemu plików.
+Liczba bloków systemu plików, które mballoc będzie próbował używać 
+do rozmiaru alokowania i wyrównywania. Do systemów RAID 5/6 powinna być 
+to liczba dysków z danymi * rozmiar części (chunk) RAID w blokach systemu plików.
 
 delalloc
 Odroczona alokacja bloków do czasu zapisu.
 
 nodelalloc
-Wyłącza odroczoną alokacją. Bloki są alokowane gdy dane są kopiowane z buforów (cache) użytkownika do buforów stronicowania.
+Wyłącza odroczoną alokacją. Bloki są alokowane gdy dane są kopiowane 
+z buforów (cache) użytkownika 
+do buforów stronicowania.
 
 max_batch_time=mikrosekundy
-Maksymalny czas, jaki ext4 powinien czekać na łączne, wsadowe wykonanie przez system plików dodatkowych operacji, za pomocą synchronicznej operacji zapisu. Ponieważ synchroniczna operacja zapisu wymusza wykonanie zapisu, a następnie czeka na zakończenie wejścia/wyjścia, nie kosztując zbyt dużo i potencjalnie wykazując się znacznym zyskiem przepływności, czekamy przez krótki czas sprawdzając, czy nie można przy okazji zapisu synchronicznego dokonać również innych transakcji zapisu. Używany algorytm jest zaprojektowany w celu automatycznego dostosowania do szybkości dysku, mierząc (średni) czas jaki potrzebny jest do zakończenia wprowadzania transakcji w życie. Można nazwać ten czas "czasem wykonania". Jeśli czas, przez jaki działa transakcja jest mniejszy od czasu wykonania, to ext4 spróbuje wstrzymać się przez czas wykonania, sprawdzając, czy inne operacje nie mogą dołączyć się do transakcji. Czas wykonania jest ograniczony wielkością max_batch_time, która domyślnie wynosi 15000 mikrosekund (15ms). Ta optymalizacja może być całkowicie wyłączona przez ustawienie wartości max_batch_time na 0.
+Maksymalny czas, jaki ext4 powinien czekać na łączne, wsadowe wykonanie 
+przez system plików dodatkowych operacji, za pomocą synchronicznej 
+operacji zapisu. Ponieważ synchroniczna operacja zapisu wymusza 
+wykonanie zapisu, a następnie czeka na zakończenie wejścia/wyjścia, 
+nie kosztując zbyt dużo i potencjalnie wykazując się znacznym zyskiem 
+przepływności, czekamy przez krótki czas sprawdzając, czy nie można 
+przy okazji zapisu synchronicznego dokonać również innych transakcji zapisu. 
+Używany algorytm jest zaprojektowany w celu automatycznego dostosowania 
+do szybkości dysku, mierząc (średni) czas jaki potrzebny jest 
+do zakończenia wprowadzania transakcji w życie. Można nazwać ten czas 
+"czasem wykonania". Jeśli czas, przez jaki działa transakcja 
+est mniejszy od czasu wykonania, to ext4 spróbuje wstrzymać się przez 
+czas wykonania, sprawdzając, czy inne operacje nie mogą dołączyć się 
+do transakcji. Czas wykonania jest ograniczony wielkością max_batch_time, 
+która domyślnie wynosi 15000 mikrosekund (15ms). 
+Ta optymalizacja może być całkowicie wyłączona 
+przez ustawienie wartości max_batch_time na 0.
 
 min_batch_time=mikrosekundy
-Parametr ustawia czas wykonania (jak opisano powyżej) na minimum min_batch_time. Domyślnie jest to 0 mikrosekund. Zwiększanie tej wartości może poprawić przepływność przy wielowątkowym, synchronicznym obciążeniu i bardzo szybkich dyskach, kosztem zwiększonych opóźnień.
+Parametr ustawia czas wykonania (jak opisano powyżej) 
+na minimum min_batch_time. Domyślnie jest to 0 mikrosekund. 
+Zwiększanie tej wartości może poprawić przepływność przy wielowątkowym, 
+synchronicznym obciążeniu i bardzo szybkich dyskach, kosztem 
+zwiększonych opóźnień.
 
 journal_ioprio=prio
-Priorytet wejścia/wyjścia (od 0 do 7, gdzie 0 jest najwyższym priorytetem), który powinien być użyty do operacji wejścia/wyjścia przedstawionych przez kjournald2 podczas operacji wykonania. Domyślnie zostanie użyta wartość 3, która jest nieznacznie wyższym priorytetem, niż domyślny priorytet wejścia/wyjścia.
+Priorytet wejścia/wyjścia (od 0 do 7, gdzie 0 jest najwyższym priorytetem), 
+który powinien być użyty do operacji wejścia/wyjścia przedstawionych 
+przez kjournald2 podczas operacji wykonania. Domyślnie zostanie użyta wartość 3, 
+która jest nieznacznie wyższym priorytetem, niż domyślny priorytet wejścia/wyjścia.
 
-abort Symuluje efekt wywołania funkcji ext4_abort() w celach debugowania. Jest ona zwykle używana podczas ponownego montowania systemu plików, który został już zamontowany.
+abort Symuluje efekt wywołania funkcji ext4_abort() w celach debugowania. 
+Jest ona zwykle używana podczas ponownego montowania systemu plików, 
+który został już zamontowany.
 
 auto_da_alloc|noauto_da_alloc
 Jeśli opcja auto_da_alloc jest włączona, ext4 będzie wykrywał wzorce
-zamień-zmieniając-nazwę i zamień-obcinając i wymuszał sytuację, że bloki mające być zaalokowane z opóźnieniem są alokowane w następnym wprowadzeniu dziennika, w domyślnym trybie data=ordered, a zapis bloków danych nowego pliku jest wymuszany przed zatwierdzeniem operacji rename(). Zapewnia to podobny poziom bezpieczeństwa co ext3 i zapobiega problemowi "plików zerowej długości", który mógłby się pojawić przy załamaniu systemu przed zapisem bloków o opóźnionej alokacji.
+zamień-zmieniając-nazwę i zamień-obcinając i wymuszał sytuację, 
+że bloki mające być zaalokowane z opóźnieniem 
+są alokowane w następnym wprowadzeniu dziennika, w domyślnym trybie 
+data=ordered, a zapis bloków danych nowego pliku jest wymuszany 
+przed zatwierdzeniem operacji rename(). Zapewnia to podobny poziom 
+bezpieczeństwa co ext3 i zapobiega problemowi "plików zerowej długości", 
+który mógłby się pojawić przy załamaniu systemu 
+przed zapisem bloków o opóźnionej alokacji.
 
 discard/nodiscard
-Kontroluje, czy ext4 powinien przeprowadzać polecenia discard/TRIM na podległym urządzeniu blokowym, gdy bloki są zwalniane. Jest to przydatne w przypadku urządzeń SSD i alokowania elastycznego/"rzadkiego" w jednostkach LUN, ale domyślnie jest wyłączone do czasu odpowiedniego przetestowania tej opcji.
+Kontroluje, czy ext4 powinien przeprowadzać polecenia discard/TRIM 
+na podległym urządzeniu blokowym, gdy bloki są zwalniane. 
+Jest to przydatne w przypadku urządzeń SSD i alokowania elastycznego/"rzadkiego" 
+w jednostkach LUN, ale domyślnie jest wyłączone do czasu odpowiedniego przetestowania tej opcji.
 
 nouid32
-Wyłącza 32-bitowe UID-y i GID-y w celu zachowania zgodności ze starszymi jądrami,które przechowują i oczekują wartości 16-bitowych.
+Wyłącza 32-bitowe UID-y i GID-y w celu zachowania zgodności ze starszymi 
+jądrami,które przechowują i oczekują wartości 16-bitowych.
 
-resize Pozwala na zmianę rozmiaru systemu plików do końca ostatniej istniejącej grupy bloków, dalsze zmiany muszą być wykonane za pomocą resize2fs albo online, albo offline. Może być użyta tylko w połączeniu z ponownym zamontowaniem.
+resize Pozwala na zmianę rozmiaru systemu plików do końca ostatniej 
+istniejącej grupy bloków, dalsze zmiany muszą być wykonane za pomocą 
+resize2fs albo online, albo offline. Może być użyta tylko w połączeniu 
+z ponownym zamontowaniem.
 
 block_validity/noblock_validity
-Opcja pozwala na włączenie/wyłączenie wbudowanej w jądro możliwości śledzenia bloków metadanych systemu plików w ramach wewnętrznych struktur danych. Umożliwia to szybką lokalizację przez mechanizm alokowania wieloblokowego (i inne) ekstentów mogących zachodzić na bloki metadanych systemu plików. Opcja jest przeznaczona do debugowania i ponieważ wpływa negatywnie na wydajność, jest domyślnie wyłączona.
+Opcja pozwala na włączenie/wyłączenie wbudowanej w jądro możliwości 
+śledzenia bloków metadanych systemu plików w ramach wewnętrznych struktur 
+danych. Umożliwia to szybką lokalizację przez mechanizm alokowania 
+wieloblokowego (i inne) ekstentów mogących zachodzić na bloki metadanych 
+systemu plików. Opcja jest przeznaczona do debugowania i ponieważ wpływa
+ negatywnie na wydajność, jest domyślnie wyłączona.
 
 dioread_lock/dioread_nolock
-Kontroluje, czy ext4 powinien używać blokowania odczytu DIO. Jeśli podano opcję dioread_nolock, ext4 będzie alokował niezainicjowane ekstenty przed zapisem bufora i konwersją ekstentu na zainicjowany po wykonaniu wejścia/wyjścia. W ten sposób, kod ext4 może zapobiec wzajemnemu wykluczaniu i-węzłów, poprawiając skalowalność na szybkich nośnikach. Niestety, opcja nie działa z dziennikiem danych i  dioread_nolock zostanie wówczas zignorowane wraz z ostrzeżeniem jądra. Proszę  zauważyć, że ścieżka kodu dioread_nolock jest używana tylko do plików  wykorzystujących ekstenty. Z powodu tych ograniczeń, opcja jest domyślnie wyłączona  (tzn. dioread_lock).
+Kontroluje, czy ext4 powinien używać blokowania odczytu DIO. Jeśli podano
+ opcję dioread_nolock, ext4 będzie alokował niezainicjowane ekstenty 
+ przed zapisem bufora i konwersją ekstentu na zainicjowany 
+po wykonaniu wejścia/wyjścia. W ten sposób, kod ext4 może zapobiec 
+wzajemnemu wykluczaniu i-węzłów, poprawiając skalowalność na szybkich 
+nośnikach. Niestety, opcja nie działa z dziennikiem danych 
+i  dioread_nolock zostanie wówczas zignorowane wraz z ostrzeżeniem jądra. 
+Proszę  zauważyć, że ścieżka kodu dioread_nolock jest używana tylko 
+do plików  wykorzystujących ekstenty. 
+Z powodu tych ograniczeń, opcja jest domyślnie wyłączona  (tzn. dioread_lock).
 
 i_version
 Włącza obsługę 64-bitowej wersji i-węzłów. Opcja jest domyślnie wyłączona."
 
-53. Jest możliwość otagowania partycji (jeżeli jest ich dużo),  zarezerwowania przestrzeń dla roota, można też wybrać z której partycji ma się bootować system.
+53. Jest możliwość otagowania partycji (jeżeli jest ich dużo),  
+zarezerwowania przestrzeń dla roota, można też wybrać z której partycji 
+ma się bootować system.
 
-54. W kolejnym kroku tworzę przestrzeń wymiany, tworząc nową partycję wybieram pro/log a następnie swap area.
+54. W kolejnym kroku tworzę przestrzeń wymiany, tworząc nową partycję 
+wybieram pro/log a następnie swap area.
 
-55. Po wprowadzeniu zmian przed zatwierdzeniem pojawia się pytania czy wprowadzone zmiany zapisać na dysku i zatwierdzeniu rozpoczyna się proces instalacji.
+55. Po wprowadzeniu zmian przed zatwierdzeniem pojawia się pytania czy 
+wprowadzone zmiany zapisać na dysku i zatwierdzeniu rozpoczyna się proces instalacji.
 
-56. Po zakończeniu instalacji podstawowego systemu operacyjnego jest możliwość dodatnia kolejnych nośników, włożenia kolejnych płyt, nie korzystam z tego.
+56. Po zakończeniu instalacji podstawowego systemu operacyjnego jest 
+możliwość dodatnia kolejnych nośników, włożenia kolejnych płyt, nie korzystam z tego.
 
-57. Dalej wybieram Polskę i wskazuję serwer, skąd będę pobierać pakiety z internetu.
+57. Dalej wybieram Polskę i wskazuję serwer, skąd będę pobierać 
+pakiety z internetu.
 
-58. Nie korzystam z propozycji udziału w ankiecie popularności pakietu i kontynuuję instalację.
+58. Nie korzystam z propozycji udziału w ankiecie popularności pakietu 
+i kontynuuję instalację.
 
-59. Pojawia się środowiska graficzne, które można wybrać. Chcę instalować bez środowiska graficznego więc spacją odznaczam te, które są zaznaczone, więc zaznaczam tylko standardowe narzędzia systemowe, które wg znalezionego przeze mnie w internecie źródła: https://csmojo.com/posts/what-debian-standard-system-utilities-include.html
+59. Pojawia się środowiska graficzne, które można wybrać. 
+Chcę instalować bez środowiska graficznego więc spacją odznaczam te, 
+które są zaznaczone, więc zaznaczam tylko standardowe narzędzia systemowe, 
+które wg znalezionego przeze mnie w internecie źródła: 
+https://csmojo.com/posts/what-debian-standard-system-utilities-include.html
 zawierają: 
 “    apt-listchanges
     lsof
@@ -217,8 +457,70 @@ zawierają:
     exim4-base
     debian-faq
     doc-debian”
-60. Pozostałe opcje, z których nie skorzystałam scharakteryzuję i uzupełnię w nabliższej przyszłości, bo obawiam się, że nie zdążę wykonać całego opracowania i wysłać do piątku.
 
-61. Kontynuując instalację wybieram możliwość zainstalowania GRUB boot loadera, bez którego system się nie uruchomi.
+60. Porównania środowisk graficznych:
+
+GNOME
+Zalety:
+- prosty w użyciu
+- łatwe dostosowanie wyglądu do preferencji użytkownika
+- dynamiczne i elastyczne przestrzenie robocze
+Wady:
+- duże zużycie zasobów systemowych
+
+KDE Plazma
+Zalety:
+- dopracowany interfejs użytkownika
+- elastyczne środowisko graficzne
+- przyjazne dla słabszych i starszych komputerów
+Wady:
+- średnie zużycie zasobów systemowych
+- może wydawać się skomplikowane w użyciu dla początkujących użytkowników
+
+MATE
+Zalety:
+- intuicyjne i łatwe w obsłudze
+- duże możliwości dostosowania wyglądu
+- przyjazne dla słabszych i starszych komputerów
+Wady:
+- interfejs może wydawać się przestarzały
+
+Cinnamon
+Zalety:
+- elegancki i dopracowany wygląd
+- łatwy i przyjazny w użytkowaniu
+- duże możliwości dostosowania konfiguracji
+- atrakcyjny i stabilny Interfejs 
+Wady:
+-duże zużycie zasobów systemowych
+
+Xfce
+Zalety:
+- małe zużycie zasobów systemowych
+- lekki i przyjazny dla starszego sprzętu
+- łatwy w obsłudze
+Wady:
+- interfejs może się wizualnie wydawać zbyt stary
+- ograniczone możliwości konfiguracji
+
+LXDE
+Zalety:
+- wysoka wydajność środowiska graficznego, idealna dla starszego sprzętu
+- niskie zużycie zasobów,
+- kompatybilny z Unixem i innymi platformami zgodnymi z POSIX, takimi 
+jak Linux, OpenBSD i FreeBSD.
+Wady:
+- brak animacji na rzecz wydajności
+
+LXQT
+Zalety:
+- elastyczne elementy modułowe
+- niskie zużycie zasobów 
+- łatwa modyfikacja wygląd systemu,
+Wady:
+- brak animacji na rzecz wydajności
+
+61. Kontynuując instalację wybieram możliwość zainstalowania GRUB boot loadera, 
+bez którego system się nie uruchomi.
 
 62. Instalacja została zakończona pomyślnie.
