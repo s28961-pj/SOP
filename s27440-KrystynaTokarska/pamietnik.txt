@@ -8,3 +8,10 @@ Na dzisiejszych zajęciach nauczyłam się tworzyć maszynę wirtualną, ustawia
 czasu na omówienie wszystkich aspektów w maszynie wirtualnej (tworzyliśmy ją w pierwszym semestrze, dużo opcji powinniśmy już znać). Przez to na instalację, czyli tak naprawdę główny punkt zostało mało czasu, który bardziej by się przydał (np. na omówienie wszystkich dostępnych opcji, część jest naprawdę ciężko znaleźć w zrozumiałej formie w internecie).
 
 3. Oprócz tego instalacja była zrozumiała i cieszę się, że w przyszłości będę już umiała to zrobić.
+
+2023-03-18
+
+Na zajeciach uczylismy sie pisac skrypty w bashu. Bylo ok, wiekszosc omawialismy
+na UKOSach w poprzednim semestrze, ale dobrze to sobie powtorzyc. Zauwazylam,
+ze czesto niestety robie cos dluzej niz trzeba. Chce nad tym pracowac i mam
+nadzieje ze mi sie uda :)
