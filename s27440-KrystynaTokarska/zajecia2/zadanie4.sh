@@ -1,7 +1,7 @@
 #!/bin/bash
 
 wynik=$(ls -l)
-echo -e "${wynik[@]}"
+echo -e "${wynik}"
 
 #ls -l > plik.txt
 #X='plik.txt'
