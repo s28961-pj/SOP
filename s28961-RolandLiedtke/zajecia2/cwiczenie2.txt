@@ -1,0 +1,11 @@
+1. W pierwszym przypadku poleceniem bash przeszliśmy do kolejnej powłoki ( 
+nowej instancji), a zmienne lokalne są dostępne jedynie z poziomi powłoki 
+w której zostały utworzone. Rozwiązaniem może być export zmiennej jako 
+środowiskowe (globalne).
+
+2. W drugim przypadku przypisujemy do zmiennej kilka słów, więc 
+potrzebujemy "" lub ''. Brak cudzysłowia zadziała w przypadku pojedynczego 
+wyrazu.
+
+3. Znak ' traktuje zawartosc jako zwykle znaki, natomiast " pozwala używać 
+składni.
