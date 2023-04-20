@@ -1,8 +1,8 @@
 #!/bin/bash
 
-pliki=("$@")
+pliki=($@)
 
-for i in "${pliki[@]}"
+for i in ${pliki[@]}
 do
 	cat "$i"
 done

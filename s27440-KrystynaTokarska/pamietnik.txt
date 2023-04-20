@@ -15,3 +15,23 @@ Na zajeciach uczylismy sie pisac skrypty w bashu. Bylo ok, wiekszosc omawialismy
 na UKOSach w poprzednim semestrze, ale dobrze to sobie powtorzyc. Zauwazylam,
 ze czesto niestety robie cos dluzej niz trzeba. Chce nad tym pracowac i mam
 nadzieje ze mi sie uda :)
+
+2023-04-01
+
+Na dzisiejszych zajęciach uczyliśmy się:
+1. Instrukcji if - ona byla mi już znana, wiec raczej nie miałam wiekszych
+problemow.
+2. Petli for - tu tez bylo mi to raczej znane. Ja preferuje pisac w koeljnych
+liniach, nie do konca wiedzialam ze mozna wszystko w jednej.
+3. Tablic - tutaj byla to nowosc, wiec juz musiala troche poszukac i pomylsec
+jednak udalo mi sie zrobic zadania z cwiczen 2
+4. Funkcji - byla to dla mnie zupelna nowosc (w bashu oczywiscie), ale chyba 
+sobie poradzilam, chociaz jedna moja funkcja nie dziala i za nic nie wiem
+dlczaego. Bede dopytywac na zajeciach.
+
+Do domu bylo bardzo przyjemne zadanie korzystania z wyrazen regularnych.
+Nie jestem w tym zbyt dobra wiec dobrze pocwiczyc. W ostatnim punkcie,
+sprawdzanie czy podany argument jest mailem pomoglo mi postawienie poczatku
+i konca linii - nie wiem nadal czemu, ale nagle wszystko dzialano
+(podawalam przy testowaniu mail bez zadnych ' ani ")
+
