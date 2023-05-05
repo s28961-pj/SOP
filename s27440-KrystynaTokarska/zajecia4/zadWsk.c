@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-/* typedef int (*f)(int, int); */
-
 int max(int, int);
 int min(int, int);
 int sum(int, int);
