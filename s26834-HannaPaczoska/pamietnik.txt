@@ -1,0 +1,39 @@
+2023-03-04
+Moj kochany pamietniczku na dzisiejszych zajeciach:
+- poznałam zasady zaliczenia przedmiotu,
+- dowiedziałam się jak zainstalować system operacyjny debian 
+na wirtulanej maszynie.
+O zajęcia mogę powiedzieć, że były przede wszystkim szybkie. 
+Całe szczęście, że Pan Tomasz wszystko nagrywał i miałam możliwość 
+kilkukrotnego obejrzenia materiału po zajęciach, bo bez tego byłoby kiepsko.
+W ogóle, to uważam, że nagrywanie zajęć jest genialnym pomysłem, 
+bo nawet kiedy staram się wszystko zanotować, to zawsze coś ważnego 
+może mi umknąć, a tak zawsze mogę wrócić do nagrania i wysłuchać ponownie.
+Troszkę miałam problem z nadążeniem za tempem nagrania, bo Pan Tomasz mówił bardzo szybko, 
+a ja chyba nie potrafię tak szybko słuchać.
+Zajęcia podobały mi się bardzo, chociaż zagadnienie instalacji linuxa uważam za trudne 
+i wymagające olbrzymiej wiedzy.
+
+2023-03-18
+Mój kochany pamiętniczny, na dzisiejszych zajęciach:
+- poznałam zasady pracy ze skryptami Bash-a. Muszę stwierdzić, że dużo 
+nauki przede mną, ponieważ, bo o ile pierwsze cztery ćwiczenia były 
+łatwe, to przy próbie zamiany końcówki imienia przy odmianie 
+przez przypadki, pojawił sie problem, którego do tej pory
+nie potrafię rozwiązać.
+Kolejne ćwiczenie i zadanie domowe na szczęście rozwiązałam.
+Na zajęciach dzięki uprzejmości Pana Tomasza, który krok po kroku 
+poprowadził przez proces logowania do szufladii, przypomniałam sobie, 
+jak prosto można to zrobić i bardzo za to dziękuję.
+Mimo, że samo logowanie za pomocą putty okazało się proste, 
+szło mi to trochę opornie, jednak Pan Tomasz wykazał się wielką 
+cierpliwością i wyrozumiałością i dzięki temu ani razu nie poczułam się 
+jak głupek. Bardzo dziękuję za pełne cierpliwości podejście do studentów.
+Ćwiczenia z basha zrobiłam w plikach z rozszerzeniem sh, do których dołączam 
+komentarz zawarty w pliku Wyjasnienia.txt.
+Poprawiłam również instrukcję instalacji debiana, w sposób następujący:
+- skróciłam ciągnące się kilometrami wiersze,
+- wprowadziłam poprawki do fragmentów wskazanych przez Pana Tomasza, zgodnie z Jego
+wskazówkami,
+- uzupełniłam pkt. 60 instrukcji (porównanie środowisk graficznych), którego dwa tygodnie 
+temu nie zdążyłam opisać.

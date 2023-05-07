@@ -1,0 +1,20 @@
+Przygotowanie wirtualnej maszyny:
+*Stworzenie nowej maszyny Debian 64-bit
+*RAM przydzielam 4GB
+*Tworzę nowy wirtualny dysk twardy VDI który jest przeznaczony dla Virttualbox'a, przydzielam dynamicznie dysk ponieważ nie potrzeba mi dużej wydajności, a instaluje ten system tylko do nauki.Przydzielam 4GB pamięci  ponieważ 2gb jest minimum a 4 przydadzą sie do zapisywania wiekszej ilości danych.
+*W ustawieniach system zmieniam w kolejność bootowania floppy ponieważ nie używam dyskietki, urządzenia wskazujące zmieniam na mysz, nie zmieniam ram, procesora oraz jego wykorzystania.
+*W zakładce ekran w ustawieniach nic nie zmieniam podobnie jak w dźwięk, sieć, porty szeregowe, usb, udostępniane foldery oraz interfejs uzytkownika.
+*W zakładce pamięć dodaje do kontrolera IDE płytkę z Debianem.
+Instalacja Debiana
+*Wybieram opcję install bez interfejsu graficznego
+*W opcjach językowych wybieram jezyk Angielski, a region Polskę, czyli other potem Europe i Poland.
+*układ klawiatury wybieram united States ponieważtakiej uzywamy zwykle.
+*Zestaw znaków wybieram American English.
+*Hostname ustawiam na debian, nie ustawiam domeny,ustawiam hasło dla uzytkownika oraz dla roota czyli administartora w Linux
+*Partycję dysku ustawiam ręcznie czyli manual, na system operacyjny przeznaczam 2GB, a drugie 2GB przeznaczam na kolejną partycję, na której będe przechowywał pliki.
+*Jako mirror server wybieram ftp.task.gda.pl ponieważjest najbliżej.
+*Pomijam proxy, ponieważ nie muszę.
+*Na zbieranie statystyk nie wyrażam zgody
+*Przy wyborze software zaznaczam tylko serwer SSH.
+*Instaluję boot loadera GRUB, jest to program, który uruchamia system, lub wiele systemów, gdy mamy zainstalowane więcej niż jeden na jednym dysku. Instaluję go na /dev/sda
+*Zakańczam instalację

@@ -1,0 +1,91 @@
+Wyjaśnienia do ćwiczeń:
+
+Ćwiczenie 2:
+
+Wpisanie polecenia:
+X=tekst
+echo $X
+bash
+echo $X
+spowodowało wyświetlenie jednokrotne słowa tekst.
+Po wpisaniu słowa bash w terminalu, tworzymy nowy proces powłoki Bash. 
+Ten proces Bash działa jako osobny proces i nie dziedziczy zmiennych 
+środowiskowych ani innych zmiennych z procesu nadrzędnego, który go uruchomił.
+Oznacza to, że po wpisaniu bash, proces Bash działa w izolacji od poprzedniego 
+procesu Bash i nie ma dostępu do zmiennej X utworzonej w poprzednim procesie.
+Dlatego po wpisaniu bash i uruchomieniu nowego procesu Bash, 
+zmienna X nie będzie już dostępna i nie zostanie wyświetlona 
+w wyniku działania ostatniego polecenia echo $X.
+
+W poleceniu:
+X=Tekst dłuższy
+echo $X
+pomoże zastosowanie cudzysłowów lub apostrofów, a tekst zostanie wyświetlony, 
+co zostało zaprezentowaniu w skrypcie cwiczenie2.sh
+
+W poleceniu:
+X="Tekst 1"
+Y="tekst:$X"
+echo "$Y"
+Y='tekst:$X'
+echo "$Y"
+Y=tekst:$X
+echo "$Y"
+widzimy, żę zastosowanie cudzysłowów powoduje, że zmienna jest rozpoznawana 
+i wypisana zostaje treść przypisana do tej zmiennej.
+Zastosowanie apostrofów powodje, że treść pomiędzy apostrofami traktowana 
+jest jak tekst i wypisana zostaje nazwa zmiennej.
+
+Ćwiczenie 3:
+1.PATH - przechowuje listę ścieżek do katalogów, w których system szuka programów 
+wywoływanych z wiersza poleceń. Jeśli np. chcemy uruchomić program z konsoli, 
+to system będzie szukał go w katalogach znajdujących się na liście $PATH, 
+aż znajdzie plik wykonywalny o podanej nazwie.
+2.RANDOM - przechowuje losową liczbę całkowitą od 0 do 32767. 
+Ta zmienna może być przydatna, jeśli potrzebujemy wygenerować losową 
+wartość w skrypcie Bash.
+3.PWD - przechowuje aktualną ścieżkę do katalogu roboczego (working directory). 
+Może się to przydać, gdy chcemy np. wykonać operacje na plikach 
+znajdujących się w bieżącym katalogu.
+4.PS1 - przechowuje ciąg znaków, który jest wyświetlany jako wiersz poleceń (prompt) 
+w interaktywnym trybie Bash. Możemy zmienić wartość tej zmiennej, aby dostosować 
+wygląd wiersza poleceń do naszych potrzeb.
+5.USER - przechowuje nazwę użytkownika, pod którym jesteśmy zalogowani do systemu.
+6.HOSTNAME - przechowuje nazwę hosta (komputera), na którym jesteśmy zalogowani.
+7.OSTYPE - przechowuje nazwę typu systemu operacyjnego, na którym jest uruchomiony 
+skrypt Bash. Może być przydatna, gdy chcemy napisać skrypt, który działa 
+na różnych systemach operacyjnych i wymaga dostosowania do poszczególnych wersji.
+
+Ćwiczenie 4:
+X=$(ls -l)
+echo $X - próba wyświetlenia zmiennej $X za pomocą echo $X spowoduje, 
+że formatowanie wyniku zostanie utracone. W przypadku użycia echo $X, 
+każda biała przestrzeń zostanie zastąpiona pojedynczą spacją,
+echo -e "${X}" - właściwą komendą będzie echo -e "${X}", 
+aby wyświetlić zawartość zmiennej X, z zachowaniem formatowania wyniku.
+
+Ćwiczenie 5:
+Ćwiczenia 5a nie jestem w stanie rozwiązać. 
+Próbowałam na różne sposoby, ale zawsze zostawała ostatnia litera imienia, 
+do którego dodawana była końcówka i wychodziło Alaę.
+
+Cwiczenie 5b:
+
+#!/bin/bash
+A=$1
+echo "Pierwszy znak: ${A:0:1}"
+echo "Ostatni znak: ${A: -1}"
+echo  -e "${A//SOP/\\e[32mSOP\\e[0m}"
+
+wstawienie pojedynczego znaku \ powodowało, że zamiast słowa o zmienionym kolorze 
+pojawiał się ciąg znaków e[32mSOP\e[0m. Wstawienie podwójnego \\ rozwiązało ten problem.
+
+Zadanie domowe:
+
+#!/bin/bash
+
+A=$(cat $1)
+echo -e "${A//Hania/\\e[31mHania\\e[0m}"
+
+Plik wywołałam z parametrem plik.txt który zawierał przykładowy tekst zawierający imię.
+
