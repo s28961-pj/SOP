@@ -1,0 +1,9 @@
+04.03.2023r.
+Na dzisiejszych ćwiczeniach zapoznawaliśmy się z programem VirtualBox i omawialiśmy opcje które się w nim znajdują.
+Póżniej instalowaliśmy system operacyjny Debian, bez środowiska graficznego.
+Wszystko co robiliśmy na zajęciach potrafię, ponieważ w technikum kożystałem z programu Virtualbox i instalowałem już
+na nim dużo systemów operacyjnych (Debian,OpenSUSE,Slackware,Ubuntu,Windows 7,10).
+
+18.04.2023r.
+Na dzisiejszych zajęciach poznaliśmy zasadę tworzenia skryptów w bashu oraz wykonywaliśmy zadania które byly do zrobienia na cwiczeniach.
+Wszystko co robiliśmy na zajęciach potrafię, ponieważ w technikum miałem takie same zajęcia z tworzenia skryptów, oraz w pierwszym semestrze studiów mieliśmy to na UKOS.
