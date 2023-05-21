@@ -62,3 +62,22 @@ mogli zrobic to zadanie na zajeciach. Ja tez do konca nie rozumiem co to
 znaczy, ze program ma implementowac liste. Tzn ze jak go wywolamy to cos doda
 do listy, ktora napiszemy recznie? Bylabym wdzieczna za wyjasnienie tego na 
 zajeciach.
+
+update: troche pogooglalam, torche poszukalam i jakos sie udalo, nawet 
+moge powiedziec ze rozumiem jak to dziala :)
+
+
+2023-05-06
+
+Zadania z procesow robilam na zajeciach, sporo mi to dalo, ciesze sie, ze sie
+zglosilam. Jednak bardzo duzo dalo mi zrobienie zadania domowego (z tym 
+rysowaniem drzewa procesow). Chcialam je zrobic modyfikujac kod z zadania 5 
+robiac petle w petli, ale cos mi nie dzialalo, tworzylo mi sie duzo za duzo
+procesow, wiec znowu troche poszukalam i napisalam od nowa. Nie rozumiem 
+tylko jednej rzeczy - generowalam procesy w petli gdzie i przyjmowalo 
+najpierw 0 a pozniej 1, a jak robilam wersje testowa, gdzie wypisywalam nr
+procesu (i+1) i pid oraz ppid to jako pierwszy drukowal sie proces nr 2 (i=1)
+a pozniej proces 1 (i=0). Dlaczego drukowaly sie w odwrotnej kolejnosci? Taka
+sytuacja miala miejsce zarowno w przypadku procesow dzieci jak i wnukow.
+(Na wykresie nie widac ktory byl ktory, bo drukuje tylko pid i ppid, ale tak
+bylo jak testowalam)
